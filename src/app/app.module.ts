@@ -4,13 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DoughListComponent } from './dough/dough-list/dough-list.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     DoughListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
