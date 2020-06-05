@@ -1,1 +1,16 @@
-<p>dough-list works!</p>
+<div class="dough-container">
+    <h3>
+    Ligurian Focaccia 
+    </h3>
+    <div *ngFor="let ingredient of ingredientList">
+        {{ ingredient.name }}: {{ ingredient.amount * percentageControl.value }} {{ingredient.unit}}
+    </div>
+    <input  type="number"
+            value="1.0"
+            min="0" 
+            max="5"
+            step="0.1"
+            [formControl]="percentageControl">
+</div>
+<p>Form Control value: {{ percentageControl.value | json }}</p>
+<p>Form Control status: {{ percentageControl.status | json }}</p>
