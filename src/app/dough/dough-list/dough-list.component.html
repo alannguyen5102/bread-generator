@@ -2,8 +2,18 @@
     <h3>
     Ligurian Focaccia 
     </h3>
-    <div *ngFor="let ingredient of ingredientList">
-        {{ ingredient.name }}: {{ ingredient.amount * percentageControl.value }} {{ingredient.unit}}
+    <div *ngFor="let ingredient of recipe._ingredientList">
+        {{ ingredient.name }}: {{ (ingredient.amount * percentageControl.value).toFixed(3) }} {{ingredient.unit}}
+    </div>
+    <div>
+        {{ recipe._directions }}
+    </div>
+    <div>
+        In a medium bowl, stir together water, yeast, and honey to dissolve. <br>
+        In a very large bowl, whisk flour and salt together to combine and then add yeast mixture and olive oil. <br>
+        Stir with a rubber spatula  until just incorporated, then scrape the sides of the bowl clean and cover with plastic wrap. <br>
+        Leave out at room temperature to ferment for 12 to 14 hours until at least doubled in volume. <br>
+        <a href="https://www.saltfatacidheat.com/fat/ligurian-focaccia">www.saltfatacidheat.com/fat/ligurian-focaccia</a> <br>
     </div>
     <input  type="number"
             value="1.0"
