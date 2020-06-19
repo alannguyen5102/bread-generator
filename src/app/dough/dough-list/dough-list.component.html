@@ -1,26 +1,80 @@
 <div class="dough-container">
     <h3>
-    Ligurian Focaccia 
+    Ligurian Focaccia {{ (percentageControl.value).toFixed(3) }} half sheet(s)
     </h3>
-    <div *ngFor="let ingredient of recipe._ingredientList">
-        {{ ingredient.name }}: {{ (ingredient.amount * percentageControl.value).toFixed(3) }} {{ingredient.unit}}
+    <div>
+        <h4>
+            Dough
+        </h4>
+        <ul>
+            <div *ngFor="let ingredient of recipe._ingredientList">
+                <li>{{ ingredient.name }}: {{ (ingredient.amount * percentageControl.value).toFixed(3) }} {{ingredient.unit}}</li>
+            </div>
+        </ul>
     </div>
+    <div>
+        <input  type="number"
+                value="1.0"
+                min="0" 
+                max="5"
+                step="0.1"
+                [formControl]="percentageControl">
+    </div>
+
     <div>
         {{ recipe._directions }}
     </div>
+
     <div>
         In a medium bowl, stir together water, yeast, and honey to dissolve. <br>
         In a very large bowl, whisk flour and salt together to combine and then add yeast mixture and olive oil. <br>
         Stir with a rubber spatula  until just incorporated, then scrape the sides of the bowl clean and cover with plastic wrap. <br>
         Leave out at room temperature to ferment for 12 to 14 hours until at least doubled in volume. <br>
+    </div>
+
+    <div>
+        Spread 2 to 3 tablespoons oil evenly onto a 18-by-13 inch (46-by-33 cm) rimmed baking sheet.  <br>
+        When dough is ready, use a spatula or your hand to release it from the sides of the bowl and fold it onto itself gently, then pour out onto pan.  <br>
+        Pour an additional 2 tablespoons of olive oil over dough and gently spread across.  <br>
+        Gently stretch the dough to the edge of the sheet by placing your hands underneath and pulling outward.   <br>
+        The dough will shrink a bit, so repeat stretching once or twice over the course of 30 minutes to ensure dough remains stretched.   <br>
+        
+    </div>
+
+    <div>
+        Dimple the dough by pressing the pads of your first three fingers in at an angle.  <br>
+        Make the brine by stirring together salt and water until salt is dissolved. <br>
+        Pour the brine over the dough to fill dimples.  <br>
+        Proof focaccia for 45 minutes until the dough is light and bubbly. <br>
+        
+    </div>
+
+    <div>
+        Thirty minutes into this final proof, adjust rack to center position and preheat oven to 450°F (235°C). <br>
+        If you have a baking stone, place it on rack.  <br>
+        Otherwise, invert another sturdy baking sheet and place on rack.  <br>
+        Allow to preheat with the oven until very hot, before proceeding with baking. <br>
+        
+        
+    </div>
+
+    <div>
+        Sprinkle focaccia with flaky salt. <br>
+        Bake for 25 to 30 minutes directly on top of stone or inverted pan until bottom crust is crisp and golden brown when checked with a metal spatula.  <br>
+        To finish browning top crust, place focaccia on upper rack and bake for 5 to 7 minutes more.  <br>
+        
+    </div>
+
+    <div>
+        Remove from oven and brush or douse with 2 to 3 tablespoons oil over the whole surface (don’t worry if the olive pools in pockets, it will absorb as it sits). <br>
+        Let cool for 5 minutes, then release focaccia from pan with metal spatula and transfer to a cooling rack to cool completely. <br>
+        
+    </div>
+
+    <div>
         <a href="https://www.saltfatacidheat.com/fat/ligurian-focaccia">www.saltfatacidheat.com/fat/ligurian-focaccia</a> <br>
     </div>
-    <input  type="number"
-            value="1.0"
-            min="0" 
-            max="5"
-            step="0.1"
-            [formControl]="percentageControl">
+    
 </div>
 <p>Form Control value: {{ percentageControl.value | json }}</p>
 <p>Form Control status: {{ percentageControl.status | json }}</p>
