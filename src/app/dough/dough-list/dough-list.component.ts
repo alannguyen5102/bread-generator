@@ -12,11 +12,13 @@ export class DoughListComponent implements OnInit {
   
   public ingredientList: Array<Ingredient> = [
     new Ingredient("AP Flour", 800, "g"),
-    new Ingredient("Water", 600, "g"),
+    new Ingredient("Water 95°F", 600, "g"),
     new Ingredient("Kosher Salt", 18, "g"),
-    new Ingredient("Yeast", 0.25, "tsp"),
+    new Ingredient("Active Dry Yeast", 1.417, "g"),
     new Ingredient("Honey", 15, "g"),
-    new Ingredient("Olive Oil", 50, "g")
+    new Ingredient("Olive Oil", 50, "g"),
+    new Ingredient("Kosher Salt (Brine)", 5, "g"),
+    new Ingredient("Water 95°F (Brine)", 80, "g")
   ];
   public recipe = new Recipe(this.ingredientList, "By Samin Nosrat");
   public percentageControl = new FormControl(1);
