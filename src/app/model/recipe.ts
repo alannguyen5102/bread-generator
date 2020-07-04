@@ -2,9 +2,9 @@ import { Ingredient } from './ingredient';
 
 export class Recipe {
     public _ingredientList: Array<Ingredient>;
-    public _directions: string;
-    constructor(ingredientList: Array<Ingredient>, directions: string) {
+    public _author: string;
+    constructor(ingredientList: Array<Ingredient>, author: string) {
         this._ingredientList = ingredientList;
-        this._directions = directions;
+        this._author = author;
     }
 }
